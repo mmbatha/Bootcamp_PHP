@@ -1,0 +1,45 @@
+
+<- Vector ----------------------------------------------------------------------
+Construct an instance with an instance of Vertex.
+e.g. ``new Vector( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );``
+
+Color is optional.
+e.g.: ``$blk = new Color( array( 'red' => 0, 'green' => 0, 'blue' => 0 ) );
+new Vector( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'color' => $blk ) );``
+
+w value is also optional.
+``new Vector( array( 'w' => 0.0, 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );``
+
+The following reading and writing assessors are also available:
+Get (reads - for each co-ordinate value e.g.: ``getW()``)
+Set (writes - for each co-ordinate value e.g.: ``setX($x)``)
+
+Functions:
+``magnitude()``
+Returns the vector’s length (or "norm").
+
+``normalize()``
+Returns a normalized version of the vector. If the vector is
+already normalized, returns a fresh copy of the vector.
+
+add( Vector $rhs )
+Returns the sum vector of both vectors.
+
+sub( Vector $rhs )
+Returns the difference vector of both vectors.
+
+opposite()
+Returns the opposite vector.
+
+scalarProduct( $k )
+Returns the multiplication of the vector with a scalar.
+
+dotProduct( Vector $rhs )
+Returns the scalar multiplication of both vectors.
+
+cos( Vector $rhs )
+Returns the angle’s cosine between both vectors.
+
+crossProduct( Vector $rhs )
+Returns the cross multiplication of both vectors (right-hand mark!)
+---------------------------------------------------------------------- Vector ->

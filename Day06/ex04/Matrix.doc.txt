@@ -1,0 +1,43 @@
+
+<- Matrix ----------------------------------------------------------------------
+This class handles Matrices of size 4x4. The following constant values are
+catered for:
+IDENTITY, SCALE, RX, RY, RZ, TRANSLATION and PROJECTION
+
+The construct requires an array with the following:
+
+’preset’
+The matrix type to, mandatory. The value must be one of the Class constants
+previoulsy defined.
+
+’scale’
+The scale factor, mandatory when ’preset’ is worth SCALE.
+
+’angle’
+The rotation angle in radians, mandatory when ’preset’ is worth RX, RY
+or RZ.
+
+’vtc’
+Translation vector, mandatory when ’preset’ is worth TRANSLATION.
+
+’fov’
+Projection field of view in degrees mandatory when ’preset’ is worth PROJECTION.
+
+’ratio’
+Projected image ratio, mandatory when ’preset’ is worth PROJECTION.
+
+’near’
+Projection’s near clipping plane mandatory when ’preset’ is worth PROJECTION.
+
+’far’
+Projection’s far clipping plane mandatory when ’preset’ is worth PROJECTION.
+
+Functions:
+
+Matric mult( Matrix $rhs )
+Returns the multiplication of both matrices.
+
+Vertex transformVertex( Vertex $vtx )
+Returns a new vertex resulting from the transformation of the vertex by the
+matrix.
+---------------------------------------------------------------------- Matrix ->

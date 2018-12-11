@@ -1,0 +1,29 @@
+
+<- Camera ----------------------------------------------------------------------
+The Camera class handles the eye of the viewer.
+
+The constructor accepts the following values:
+- `origin`
+	A Vertex representing the position of the camera
+- `orientation
+	A Matrix representing the orientation of the camera
+- `ratio`
+	The quotient of the screen (width/height). Note that you can
+	either send the ratio argument, or both the width and height.
+- `width` and `height`
+	Integers representing the size of the screen.
+- `fov`
+	The field of view in degrees.
+- `near`
+	The near clipping plane of type Int.
+- `far`
+	The far clipping plane of type Int.
+
+All these values have accessors for convenience.
+
+Function:
+
+watchVertex(Vertex $wrldVtx)
+This method accepts a vertex as an argument, the one which is to be projected,
+and returns the corresponding new vertex in the camera co-ordinate.
+---------------------------------------------------------------------- Camera ->

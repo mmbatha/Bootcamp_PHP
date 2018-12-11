@@ -1,0 +1,112 @@
+.pte
+{
+	color: white;
+	text-align: center;
+}
+
+#hidden
+{
+	border: none;
+}
+
+table
+{
+	width: 100%;
+}
+
+td
+{
+	width: 5%;
+	height: 60%;
+	border: 1px solid black;
+}
+
+h1
+{
+	font-size: 2vw;
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+h2, h3
+{
+	font-size: 1vw;
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+p
+{
+	font-size: 1vw;
+	margin: 0;
+}
+
+body
+{
+	background-image: url(https://wallpaper-house.com/data/out/7/wallpaper2you_205025.jpg);
+	background-size: 150%;
+}
+
+.num_weight
+{
+	margin-right: 2px;
+	text-align: right;
+}
+
+.num_bottom
+{
+	margin-left: 2px;
+	text-align: left;
+}
+
+.ononmetal
+{
+	background-color: rgba(34, 255, 34, 0.75);
+}
+
+.alkali
+{
+	background-color: rgba(255, 204, 51, 0.75);
+}
+
+.alkaline
+{
+	background-color: rgba(255, 255, 68, 0.75);
+}
+
+.transition
+{
+	background-color: rgba(221, 187, 187, 0.75);
+}
+
+.noble
+{
+	background-color: rgba(119, 204, 255, 0.75);
+}
+
+.metalloid
+{
+	background-color: rgba(119, 221, 136, 0.75);
+}
+
+.posttransmetal
+{
+	background-color: rgba(153, 221, 204, 0.75);
+}
+
+.prevunknown
+{
+	background-color: rgba(221, 221, 221, 0.75);
+}
+
+.lanthanoid
+{
+	background-color: rgba(255, 187, 153, 0.75);
+}
+
+.actinoid
+{
+	background-color: rgba(238, 187, 221, 0.75);
+}

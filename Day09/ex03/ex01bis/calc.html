@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Calc</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<style>
+		body
+		{
+			background-color: rgba(2, 117, 213, 0.5);
+			font-family: Consolas;
+		}
+
+		h1
+		{
+			text-align: center;
+			margin: 5px 0 20px 0;
+		}
+
+		.calc
+		{
+			width: 300px;
+			background-color: rgb(2, 117, 213);
+			margin: 10% auto;
+			padding: 75px 50px 50px 50px;
+			position: relative;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20), 0 6px 6px rgba(0, 0, 0, 0.25);
+		}
+
+		.calc .square
+		{
+			width: 100px;
+			height: 100px;
+			border-radius: 5px;
+			position: absolute;
+			top: -50px;
+			left: 150px;
+			background-image: url(http://www.wethinkcode.co.za/assets/images/wethinkcode-logo-white.png)
+		}
+
+		input, select
+		{
+			padding: 6px 12px;
+			font-size: 12px;
+			margin-bottom: 15px;
+			background-color: rgb(245, 245, 245);
+			border: rgba(204, 204, 204, 0.5) 1px solid;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+		input[type='text']
+		{
+			width: 275px;
+			height: 30px;
+		}
+
+		select, input[type='submit']
+		{
+			width: 300px;
+			height: 45px;
+		}
+
+		select
+		{
+			text-indent: 130px;
+		}
+	</style>
+	<script>
+		var calc;
+		var num1;
+		var num2;
+		var op;
+
+		$(document).ready(function () {
+			calc = $('#calc');
+			num1 = $('#num1');
+			num2 = $('#num2');
+			op = $('#op');
+			calc.submit(submit);
+			setInterval("alert('Please, use me...')", 30000)
+		});
+
+		function isValid(n1, n2) {
+			return n1 == parseInt(n1, 10) && n1 >= 0 && n2 == parseInt(n2, 10) && n2 >= 0;
+		}
+
+		function submit(event) {
+			event.preventDefault();
+			var n1 = Number(num1.val());
+			var n2 = Number(num2.val());
+			if (!isValid(num1.val(), num2.val())) {
+				alert("Error :(");
+				return false;
+			}
+			switch (op.val()) {
+				case ('add'):
+					result(n1 + n2);
+					break;
+				case ('mult'):
+					result(n1 * n2);
+					break;
+				case ('div'):
+					if (n2 === 0)
+						result("It's over 9000!");
+					else
+						result(n1 / n2);
+					break;
+				case ('mod'):
+					if (n2 === 0)
+						result("It's over 9000!");
+					else
+						result(n1 % n2);
+					break;
+				case ('min'):
+					result(n1 - n2);
+					break;
+				default:
+					result("Does that operator even exist?");
+					break;
+			}
+		}
+
+		function result(res) {
+			console.log(res);
+			alert(res);
+		}
+	</script>
+</head>
+
+<body>
+	<div class="page">
+		<div class="calc">
+			<div class="square"></div>
+			<h1>Calculator</h1>
+			<form action="" id="calc">
+				<input type="text" id="num1">
+				<select id="op">
+					<option value="add">Add(+)</option>
+					<option value="min">Subtract(-)</option>
+					<option value="mult">Multiply(*)</option>
+					<option value="div">Divide(/)</option>
+					<option value="mod">Remainder(%)</option>
+				</select>
+				<input type="text" id="num2">
+				<input type="submit" value="Try me!" id="submit">
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Balloon</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		div.myBalloon {
+			height: 200px;
+			width: 200px;
+			background-color: red;
+			border-radius: 50%;
+		}
+	</style>
+	<script>
+		var clr = { 0: '#FF0000', 1: '#00FF00', 2: '#0000FF' };
+		var clrIndx = 0;
+		var myBalloon;
+		var size = 200;
+
+		window.onload = function () {
+			myBalloon = document.querySelector("#myBalloon");
+			myBalloon.addEventListener("click", balloonOnClick);
+			myBalloon.addEventListener("mouseleave", balloonOnMouseMove);
+		}
+
+		function balloonOnMouseMove() {
+			size -= 5;
+			if (size < 200)
+				size = 200;
+			clrIndx--;
+			if (clrIndx < 0)
+				clrIndx = 2;
+			balloonRefresh(clrIndx);
+		}
+
+		function balloonOnClick() {
+			size += 10;
+			if (size > 420)
+				size = 200;
+			clrIndx++;
+			if (clrIndx > 2)
+				clrIndx = 0;
+			balloonRefresh(clrIndx);
+		}
+
+		function balloonRefresh(clrIndex) {
+			myBalloon.style.height = size + 'px';
+			myBalloon.style.width = size + 'px';
+			myBalloon.style.backgroundColor = clr[clrIndx];
+		}
+	</script>
+</head>
+
+<body>
+	<div class="myBalloon" id="myBalloon">
+
+	</div>
+</body>
+
+</html>

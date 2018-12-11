@@ -1,0 +1,17 @@
+
+<- Vertex ----------------------------------------------------------------------
+Construct an instance with x, y and z values.
+e.g. ``new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );``
+
+Color is optional.
+e.g.: ``$blk = new Color( array( 'red' => 0, 'green' => 0, 'blue' => 0 ) );
+new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'color' => $blk ) );``
+
+w value is also optional.
+``new Vertex( array( 'w' => 0.0, 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );``
+
+The following reading and writing assessors are also available:
+Get (reads - for each co-ordinate value e.g.: ``getW()``)
+Set (writes - for each co-ordinate value e.g.: ``setX($x)``)
+Set (writes - for the Color of the Vertex, use: ``setColor($c)``) 
+---------------------------------------------------------------------- Vertex ->
