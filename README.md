@@ -1,2 +1,2 @@
-# 42_Piscine_PHP
-The PHP bootcamp will allow one to access the basic technologies of the web.
+# Poor_PHP
+The PHP bootcamp allowed one access to basic technologies of the web.
